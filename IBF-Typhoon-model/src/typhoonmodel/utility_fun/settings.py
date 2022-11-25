@@ -152,9 +152,9 @@ rainfall_path = MAIN_DIRECTORY+ 'forecast/rainfall/'
 mock_data_path = MAIN_DIRECTORY+'data/mock/'
 ML_model_input = MAIN_DIRECTORY+'data/model_input/df_modelinput_july.csv'
 
-os.makedirs(Input_folder)
-os.makedirs(Output_folder)
-os.makedirs(rainfall_path)
+os.makedir(Input_folder)
+os.makedir(Output_folder)
+os.makedir(rainfall_path)
 
 
 
