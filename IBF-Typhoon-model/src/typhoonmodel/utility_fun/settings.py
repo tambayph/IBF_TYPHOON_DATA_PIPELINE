@@ -155,9 +155,9 @@ ML_model_input = MAIN_DIRECTORY+'data/model_input/df_modelinput_july.csv'
 for dir_path in [Input_folder,Output_folder,rainfall_path]:
     if os.path.exists(dir_path):
         shutil.rmtree(dir_path)
-        os.mkdir(dir_path)
+        os.mkdirs(dir_path)
     else:
-        os.mkdir(dir_path)
+        os.mkdirs(dir_path)
     
 Population_Growth_factor=1.15 #(1+0.02)^7 adust 2015 census data by 2%growth for the pst 7 years 
 
