@@ -152,17 +152,12 @@ rainfall_path = MAIN_DIRECTORY+ 'forecast/rainfall/'
 mock_data_path = MAIN_DIRECTORY+'data/mock/'
 ML_model_input = MAIN_DIRECTORY+'data/model_input/df_modelinput_july.csv'
 
-os.makedir(Input_folder)
-os.makedir(Output_folder)
-os.makedir(rainfall_path)
-
-
-
-
-
-
-
-    
+for dir_path in [Input_folder,Output_folder,rainfall_path]:
+    if os.path.exists(dir_path):
+        shutil.rmtree(dir_path)
+        os.makedirs(dir_path)
+    else:
+        os.makedirs(dir_path)
     
 Population_Growth_factor=1.15 #(1+0.02)^7 adust 2015 census data by 2%growth for the pst 7 years 
 
