@@ -147,18 +147,16 @@ CENTROIDS_PATH = MAIN_DIRECTORY+'data/gis_data/centroids_windfield.geojson'
 Input_folder = MAIN_DIRECTORY+ 'forecast/Input/'
 Output_folder = MAIN_DIRECTORY+ 'forecast/Output/'
 ECMWF_folder = Input_folder+'ECMWF/'
-rainfall_path =MAIN_DIRECTORY+ 'forecast/rainfall/' 
+rainfall_path = MAIN_DIRECTORY+ 'forecast/rainfall/' 
 
 mock_data_path = MAIN_DIRECTORY+'data/mock/'
 ML_model_input = MAIN_DIRECTORY+'data/model_input/df_modelinput_july.csv'
 
+os.makedirs(Input_folder)
+os.makedirs(Output_folder)
+os.makedirs(rainfall_path)
 
-for dir_path in [Input_folder,Output_folder,rainfall_path]:
-    if os.path.exists(dir_path):
-        shutil.rmtree(dir_path)
-        os.makedirs(dir_path)
-    else:
-        os.makedirs(dir_path)
+
 
 
 
